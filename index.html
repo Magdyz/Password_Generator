@@ -8,13 +8,17 @@
 </head>
 <body>
   
-  <h1>Password Generator</h1>
-  <input type="text">
-  <button>run</button>
-  <h2></h2>
-  
-    
-   <script src="pg.js"></script>
+  <h1 id="titlePassword">Password Generator</h1>
 
+  <input id="inputText" type="number">
+
+  <input type="checkbox" id="symbolsIncluded" name="checkbox" value="symbols">
+
+  <label for="checkbox"> include symbols</label><br>
+  <h3>Please input the number of characters needed for password and press run</h3>
+
+  <button id="buttonClick" onclick="generate()">run</button>
+  <h2 id="resultText"></h2>
+    <script src="pg.js"></script>
 </body>
 </html>
