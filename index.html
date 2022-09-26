@@ -1,24 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>password generator</title>
 </head>
+
 <body>
-  
-  <h1 id="titlePassword">Password Generator</h1>
 
-  <input id="inputText" type="number">
+    <h1 id="titlePassword">Password Generator</h1>
 
-  <input type="checkbox" id="symbolsIncluded" name="checkbox" value="symbols">
+    <input id="inputText" type="number">
 
-  <label for="checkbox"> include symbols</label><br>
-  <h3>Please input the number of characters needed for password and press run</h3>
+    <input type="checkbox" id="symbolsIncluded" name="checkbox" value="symbols">
 
-  <button id="buttonClick" onclick="generate()">run</button>
-  <h2 id="resultText"></h2>
-    <script src="pg.js"></script>
+    <label for="checkbox"> include symbols</label><br>
+    <h3>Please input the number of characters needed for password and press run</h3>
+
+    <button id="buttonClick" onclick="clicked()">run</button>
+    <h2 id="resultText"></h2>
+    <script>
+// generate password using list of letters (could possibly add accepted signs to the list later)
+
+const listOfLetters = "AaBbCcDdEeFfGgEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtWwXxYyZz";
+const symbols = "!@#$%^&*()_-+={[}]|:;<,>.?/"
+const allCharacters = listOfLetters + symbols
+
+// create a random number using Math.random() then Math.floor() to transfer from float to integer
+
+function createRandomNum(n) {
+    let random = Math.random();
+    random = Math.floor(random * n) + 1;
+    return random
+}
+
+// the main function that uses the above function to choose a random index from list
+
+function generatePassword(numberOfCharacters, identifier) {
+    let newPass = [];
+    if (identifier == "letters") {
+        for (let i = 0; i < numberOfCharacters; i++) {
+            newPass.push(listOfLetters[createRandomNum(listOfLetters.length - 1)]);
+        }
+        return newPass.join("")
+    } else {
+        for (let i = 0; i < numberOfCharacters; i++) {
+            newPass.push(allCharacters[createRandomNum(allCharacters.length - 1)]);
+        }
+        return newPass.join("")
+    }
+}
+
+function clicked() {
+    const numberInputed = document.getElementById("inputText").value;
+
+    if (document.getElementById("symbolsIncluded").checked == false) {
+
+        let randomPassword = generatePassword(numberInputed, "letters");
+        document.getElementById("resultText").innerHTML = randomPassword;
+        //clearForms();
+
+    } else {
+        //const numberInputed = document.getElementById("inputText").value;
+        let randomPasswordAll = generatePassword(numberInputed, "all");
+        document.getElementById("resultText").innerHTML = randomPasswordAll;
+    }
+}
+
+    </script>
 </body>
+
 </html>
