@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>password generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <h1 id="titlePassword">Password Generator</h1>
-
-    <input id="inputText" type="number">
-
-    <input type="checkbox" id="symbolsIncluded" name="checkbox" value="symbols">
-
-    <label for="checkbox"> include symbols</label><br>
-    <h3>Please input the number of characters needed for password and press run</h3>
-
-    <button id="buttonClick" onclick="clicked()">run</button>
-    <h2 id="resultText"></h2>
-    <script src="pg.js"> </script>
+  <div class="mainContainer">
+    <div class="titleLabel">
+  <h1 id="titlePassword">Password Generator</h1>
+</div>
+<div class="inputs">
+  <input id="inputText" type="number">
+  <br><br>
+  <div class="symbolsCheckbox">
+  <input type="checkbox" id="symbolsIncluded" name="checkbox" value="symbols">
+  <label for="checkbox"> include symbols</label><br>
+  </div>
+  <div class="numbersCheckbox">
+    <input type="checkbox" id="numbersCheckbox" name="checkbox" value="symbols">
+    <label for="checkbox"> include numbers</label><br>
+    </div>
+</div>
+<div class="textLabel">
+  <h3>Please input the number of characters needed for password and press run</h3>
+</div>
+<div class="buttonMain">
+  <button id="buttonClick" onclick="clicked()">run</button>
+  <h2 id="resultText"></h2>
+</div>
+</div>
+    <script src="pg.js"></script>
 </body>
-
 </html>
