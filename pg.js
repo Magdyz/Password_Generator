@@ -73,3 +73,4 @@ document.addEventListener("keydown", function (e) {
         clicked()
     }
 })
+const clipboard = new ClipboardJS('.btn');
