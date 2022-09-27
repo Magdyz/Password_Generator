@@ -1,0 +1,59 @@
+body {
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    width: auto;
+    height: 100vh;
+    text-align: center;
+    }
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 2vh;
+    align-content: center;
+    font-family: monospace;
+    font-size: x-large;
+    padding: 5px;
+}
+
+.textLabel {
+    text-align: center;
+
+}
+
+.inputs {
+    font-size: large;
+}
+
+h2#resultText {
+    height: 100%;
+    font-size: larger;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-wrap: anywhere;
+}
+
+.buttonMain{
+    width: 20rem;
+}
+#buttonClick{
+    width: 10rem;
+    height: 3rem;
+    border-width: thick;
+    border-radius: 10px;
+    background: darkorange;
+    color: aliceblue;
+}
+
+input#inputText {
+    height: fit-content;
+    width: fit-content;
+    font-size: larger;
+}
