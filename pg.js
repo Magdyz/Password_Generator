@@ -8,7 +8,10 @@ const allCharactersNumbers = listOfLetters + numbers
 const allCharactersAndNumbers = listOfLetters + symbols + numbers
 const checkboxSymbols = document.querySelector("#symbolsIncluded");
 const checkboxnumbers = document.querySelector("#numbersCheckbox");
-
+const sliderValue = document.querySelector("#sliderRange");
+const sliderValueOutput = document.querySelector("#demo");
+const textInputed = document.querySelector("#inputText");
+const infoTextBox = document.querySelector("#infoText");
 
 // create a random number using Math.random() then Math.floor() to transfer from float to integer
 
@@ -19,6 +22,7 @@ function createRandomNum(n) {
 }
 
 // the main function that uses the above function to choose a random index from list
+// the function checks if any of the boxes is clicked, both or none before processing
 
 function generatePassword(numberOfCharacters) {
     let newPass = [];
@@ -50,19 +54,43 @@ function generatePassword(numberOfCharacters) {
     }
 }
 
+// get the value from slider, then use function generatepassword to generate a password
 
 function clicked() {
-    const numberInputed = document.getElementById("inputText").value;
+    const textValue = textInputed.value
+    const numberInputed = sliderValueOutput.innerHTML;
 
-    if (checkboxSymbols.checked == false) {
+    if (textValue.length < 1) {
 
         let randomPassword = generatePassword(numberInputed);
         document.getElementById("resultText").innerHTML = randomPassword;
+    }
+    else if (textValue.length >= 1) {
+        // check the length of the text compared to the final digits needed
+        if (textValue.length == numberInputed) {
 
-    } else {
-        //const numberInputed = document.getElementById("inputText").value;
-        let randomPasswordAll = generatePassword(numberInputed);
-        document.getElementById("resultText").innerHTML = randomPasswordAll;
+            infoTextBox.innerHTML = "This password is too weak. Try increasing the number of digits. Here is a better " + numberInputed + " digit password";
+            let randomPassword = generatePassword(numberInputed);
+            document.getElementById("resultText").innerHTML = randomPassword;
+
+        } else if (textValue.length > numberInputed) {
+
+            infoTextBox.innerHTML = "The word is more than the number of digits needed. Try using a smaller word or here is a better " + numberInputed + " digit password";
+            let randomPassword = generatePassword(numberInputed);
+            document.getElementById("resultText").innerHTML = randomPassword;
+
+        } else if (textValue.length < numberInputed) {
+
+            let remainingRandomDigits = numberInputed - textValue.length;
+
+            infoTextBox.innerHTML = "We have pimped your word and created a strong password";
+            let randomPassword = generatePassword(remainingRandomDigits);
+            document.getElementById("resultText").innerHTML = textValue + randomPassword;
+        } else {
+
+            infoTextBox.innerHTML = "Something is wrong. Please make sure you choose a number of digits and a word if needed and try again!";
+
+        }
     }
 }
 
@@ -73,4 +101,16 @@ document.addEventListener("keydown", function (e) {
         clicked()
     }
 })
+
+// using a instance of ClipboardJS library
+
 const clipboard = new ClipboardJS('.btn');
+
+// slider value to show next to number
+
+sliderValue.oninput = function () {
+    sliderValueOutput.innerHTML = sliderValue.value;
+}
+
+// function to use incase a word is inputed for password
+
