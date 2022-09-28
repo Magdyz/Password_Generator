@@ -51,6 +51,7 @@ h2#resultText {
     border-radius: 10px;
     background: darkorange;
     color: aliceblue;
+    font-weight: bold;
 }
 
 input#inputText {
@@ -86,4 +87,8 @@ input#sliderRange {
     width: 30vh;
     border-radius: 61%;
     accent-color: limegreen;
+}
+
+h3#infoText {
+    font-size: inherit;
 }
