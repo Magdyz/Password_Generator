@@ -57,7 +57,7 @@ function generatePassword(numberOfCharacters) {
 // get the value from slider, then use function generatepassword to generate a password
 
 function clicked() {
-    const textValue = textInputed.value
+    const textValue = textInputed.value;
     const numberInputed = sliderValueOutput.innerHTML;
 
     if (textValue.length < 1) {
@@ -100,6 +100,14 @@ document.addEventListener("keydown", function (e) {
     if (e.key === 'Enter') {
         clicked()
     }
+})
+
+// stop spaces in input 
+
+document.addEventListener("keydown", function (e) {
+    if (e.keyCode == 32) { 
+        e.preventDefault();
+        return false };
 })
 
 // using a instance of ClipboardJS library
