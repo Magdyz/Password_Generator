@@ -143,6 +143,3 @@ const clipboard = new ClipboardJS( '.btn' );
 sliderValue.oninput = function () {
     sliderValueOutput.innerHTML = sliderValue.value;
 }
-
-// function to use incase a word is inputed for password
-
