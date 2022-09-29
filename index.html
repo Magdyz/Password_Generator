@@ -18,8 +18,8 @@
       <h1 id="titlePassword">Password Generator</h1>
     </div>
     <div class="rangeslider">
-      <input type="range" min="1" max="100" value="60" class="myslider" id="sliderRange">
-      <p>Number of digits: <span id="demo"></span></p>
+      <input type="range" min="6" max="60" value="12" step="1" class="myslider" id="sliderRange">
+      <p>Digits: <span id="demo"></span></p>
     </div>
     <div class="inputs">
       <input id="inputText" type="text" placeholder='Type a word or leave blank'>
@@ -34,7 +34,8 @@
       </div>
     </div>
     <div class="textLabel">
-      <h3 id="infoText">Choose the number of characters for password and press run. You can add a word to be included if you like!</h3>
+      <h3 id="infoText">Choose the number of characters for password and press run. You can add a word to be included if
+        you like!</h3>
     </div>
     <div class="buttonMain">
       <button id="buttonClick" onclick="clicked()">run</button>
