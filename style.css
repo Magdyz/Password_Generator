@@ -62,6 +62,8 @@ input#inputText {
     font-size: large;
     border-radius: 4px;
     border-width: thin;
+    text-align: center;
+
 }
 
 button.btn {
