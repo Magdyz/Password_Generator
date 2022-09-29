@@ -90,7 +90,7 @@ input#sliderRange {
     -webkit-appearance: none;
     background: darkorange;
     height: 3px;
-    width: 30vh;
+    width: 200px;
     border-radius: 61%;
     accent-color: limegreen;
 }
