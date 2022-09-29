@@ -56,8 +56,8 @@ h2#resultText {
 }
 
 input#inputText {
-    height: fit-content;
-    width: 200px;
+    height: 31px;
+    width: 223px;
     font-family: initial;
     font-size: large;
     border-radius: 4px;
@@ -90,7 +90,7 @@ input#sliderRange {
     -webkit-appearance: none;
     background: darkorange;
     height: 3px;
-    width: 200px;
+    width: 30vh;
     border-radius: 61%;
     accent-color: limegreen;
 }
