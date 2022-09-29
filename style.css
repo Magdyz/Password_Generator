@@ -57,7 +57,7 @@ h2#resultText {
 
 input#inputText {
     height: fit-content;
-    width: 12em;
+    width: 200px;
     font-family: initial;
     font-size: large;
     border-radius: 4px;
