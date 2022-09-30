@@ -20,6 +20,15 @@ body {
     padding: 5px;
 }
 
+a {
+    text-decoration: none;
+}
+
+h1#titlePassword {
+    cursor: pointer;
+    color: black;
+}
+
 .textLabel {
     text-align: center;
     width: 80%;
@@ -53,6 +62,8 @@ h2#resultText {
     background: darkorange;
     color: aliceblue;
     font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 input#inputText {
@@ -93,8 +104,13 @@ input#sliderRange {
     width: 250px;
     border-radius: 61%;
     accent-color: limegreen;
+    cursor: pointer;
 }
 
 h3#infoText {
     font-size: inherit;
+}
+
+svg {
+    cursor: pointer;
 }
