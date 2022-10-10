@@ -73,7 +73,7 @@ function clicked() {
     if ( textValue.length < 1 ) {
 
         // update info text with a message
-        infoTextBox.innerHTML = "Say hello to your strong password! For a very strong password check both symbols and numbers";
+        infoTextBox.innerHTML = "Say hello to a brand new strong password! For an even stronger password, mark both symbols and numbers";
         
         // generate random password using the value inputed 
         let randomPassword = generatePassword( numberInputed );
@@ -87,7 +87,7 @@ function clicked() {
         if ( textValue.length == numberInputed ) {
 
             // update info text with a message
-            infoTextBox.innerHTML = "This password is too weak. Try increasing the number of digits. Here is a better " + numberInputed + " digit password";
+            infoTextBox.innerHTML = "This password is weak. Try increasing the number of characters. Here is a better " + numberInputed + " digit password";
             
             // generate random password using the value inputed 
             let randomPassword = generatePassword( numberInputed );
@@ -97,7 +97,7 @@ function clicked() {
 
         } else if ( textValue.length > numberInputed ) {
 
-            infoTextBox.innerHTML = "The word is more than the number of digits needed. Try using a smaller word or here is a better " + numberInputed + " digit password";
+            infoTextBox.innerHTML = "The word is more than the number of characters needed. Try using a smaller word or here is a better " + numberInputed + " digit password";
             let randomPassword = generatePassword(numberInputed);
             document.getElementById( "resultText" ).innerHTML = randomPassword;
 
