@@ -77,6 +77,10 @@ input#inputText {
 
 }
 
+.buttonMain {
+    margin: 10px;
+}
+
 button.btn {
     height: 3em;
     width: fit-content;
