@@ -183,7 +183,9 @@ function generateRandomWordPass(){
     infoTextBox.innerHTML = "We have created a strong memorable password for you";
 
     resultBox.innerHTML = CapRandomVerb + CapRandomColor + CapRandomNoun + randomPassword
+    
+    // update slider value with the new length of pass
 
-
+    sliderValueOutput.innerHTML = resultBox.innerHTML.length;
 
 }
