@@ -89,7 +89,7 @@ function clicked() {
     if ( textValue.length < 1 ) {
 
         // update info text with a message
-        infoTextBox.innerHTML = "Say hello to a brand new strong password! For an even stronger password, mark both symbols and numbers";
+        infoTextBox.innerHTML = "Say hello to a brand new strong password! For an even stronger password, include both symbols and numbers";
         
         // generate random password using the value inputed 
         let randomPassword = generatePassword( numberInputed );
@@ -103,7 +103,7 @@ function clicked() {
         if ( textValue.length == numberInputed ) {
 
             // update info text with a message
-            infoTextBox.innerHTML = "This password is weak. Try increasing the number of characters. Here is a better " + numberInputed + " digit password";
+            infoTextBox.innerHTML = "This password is weak. Try increasing the number of characters. Here is a better " + numberInputed + " character password";
             
             // generate random password using the value inputed 
             let randomPassword = generatePassword( numberInputed );
@@ -113,7 +113,7 @@ function clicked() {
 
         } else if ( textValue.length > numberInputed ) {
 
-            infoTextBox.innerHTML = "The word is more than the number of characters needed. Try using a smaller word or here is a better " + numberInputed + " digit password";
+            infoTextBox.innerHTML = "This word is longer than the number of characters selected. Try using a shorter word or here is a better " + numberInputed + " character password";
             let randomPassword = generatePassword(numberInputed);
             document.getElementById( "resultText" ).innerHTML = randomPassword;
 
@@ -129,7 +129,7 @@ function clicked() {
 
         } else {
 
-            infoTextBox.innerHTML = "Something is wrong. Please make sure you choose a number of digits and a word if needed and try again!";
+            infoTextBox.innerHTML = "Something is wrong. Please make sure you select the number of characters and a word if needed and try again!";
         }
     }
 }
@@ -188,7 +188,7 @@ function generateRandomWordPass(){
     let randomPassword = generatePassword( createRandomRange ( 2, 6 ) );
 
     // change text message
-    infoTextBox.innerHTML = "We have created a strong memorable password for you";
+    infoTextBox.innerHTML = "We have created a strong and memorable password for you";
 
     resultBox.innerHTML = CapRandomVerb + CapRandomColor + CapRandomNoun + randomPassword
     
