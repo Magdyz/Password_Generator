@@ -37,7 +37,7 @@ function createRandomNum( n ) {
 
 function createRandomRange( min, max ) {
     let random = Math.random();
-    random = Math.floor( random * ( $max - $min ) + $min );
+    random = Math.floor( random * ( max - min ) + min );
     return random
 }
 
