@@ -24,9 +24,15 @@ a {
     text-decoration: none;
 }
 
+.titleLabel {
+    font-size: large;
+}
+
 h1#titlePassword {
     cursor: pointer;
     color: black;
+    font-family: 'Silkscreen', cursive;
+    font-size: 2em;
 }
 
 .textLabel {
@@ -55,26 +61,27 @@ h2#resultText {
 }
 
 #buttonClick {
-    width: 10rem;
+    width: 12rem;
     height: 3rem;
-    border-width: thick;
-    border-radius: 10px;
+    border-width: 2px;
+    border-radius: 52px;
     background: darkorange;
     color: aliceblue;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
+    font-size: large;
+    text-shadow: 1px 1px 1px black;
 }
 
 input#inputText {
     height: 31px;
-    width: 250px;
+    width: 243px;
     font-family: initial;
     font-size: large;
-    border-radius: 4px;
-    border-width: thin;
+    border-radius: 15px;
+    border-width: 1px;
     text-align: center;
-
 }
 
 .buttonMain {
