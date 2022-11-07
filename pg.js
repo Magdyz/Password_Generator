@@ -33,6 +33,14 @@ function createRandomNum( n ) {
     return random
 }
 
+// create a random range using Math.random() then Math.floor() to transfer from float to integer
+
+function createRandomRange( min, max ) {
+    let random = Math.random();
+    random = Math.floor( random * ( $max - $min ) + $min );
+    return random
+}
+
 // the main function that uses the above function to choose a random index from list
 // the function checks if any of the boxes is clicked, both or none before processing
 
@@ -177,7 +185,7 @@ function generateRandomWordPass(){
     // create a random number of letters and numbers for extra security
     checkboxSymbols.checked = true;
     checkboxnumbers.checked = true;
-    let randomPassword = generatePassword( createRandomNum ( 6 ) );
+    let randomPassword = generatePassword( createRandomRange ( 2, 6 ) );
 
     // change text message
     infoTextBox.innerHTML = "We have created a strong memorable password for you";
