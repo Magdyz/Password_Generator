@@ -189,7 +189,7 @@ function generateRandomWordPass(){
 
     // add extra letter in the end
 
-    let lastLetterRandom = allCharactersAndNumbers[ createRandomNum ( allCharactersNumbers.length - 1 ) ].toString()
+    let lastLetterRandom = allCharactersAndNumbers[ createRandomNum ( allCharactersNumbers.length ) ].toString()
     // change text message
     infoTextBox.innerHTML = "We have created a strong and memorable password for you";
 
