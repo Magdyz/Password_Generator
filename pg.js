@@ -185,15 +185,18 @@ function generateRandomWordPass(){
     // create a random number of letters and numbers for extra security
     checkboxSymbols.checked = true;
     checkboxnumbers.checked = true;
-    let randomPassword = generatePassword( createRandomRange ( 2, 6 ) );
+    let randomPassword = generatePassword( createRandomRange ( 1, 2 ) );
 
     // add extra letter in the end
 
-    let lastLetterRandom = allCharactersAndNumbers[ createRandomNum ( allCharactersNumbers.length ) ].toString()
+    let lastLetterRandom = allCharactersNumbers[ createRandomNum ( allCharactersNumbers.length ) ].toString()
+
     // change text message
     infoTextBox.innerHTML = "We have created a strong and memorable password for you";
 
     resultBox.innerHTML = CapRandomVerb + CapRandomColor + CapRandomNoun + randomPassword + lastLetterRandom
+
+    console.log(randomPassword)
     
     // update slider value with the new length of pass
 
