@@ -187,10 +187,13 @@ function generateRandomWordPass(){
     checkboxnumbers.checked = true;
     let randomPassword = generatePassword( createRandomRange ( 2, 6 ) );
 
+    // add extra letter in the end
+
+    let lastLetterRandom = allCharactersAndNumbers[ createRandomNum ( allCharactersAndNumbers.length - 1 ) ].toString()
     // change text message
     infoTextBox.innerHTML = "We have created a strong and memorable password for you";
 
-    resultBox.innerHTML = CapRandomVerb + CapRandomColor + CapRandomNoun + randomPassword
+    resultBox.innerHTML = CapRandomVerb + CapRandomColor + CapRandomNoun + randomPassword + lastLetterRandom
     
     // update slider value with the new length of pass
 
