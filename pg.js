@@ -165,7 +165,7 @@ function generateRandomWordPass(){
     // Change background color 
     
     const element = document.querySelector('body');
-    element.setAttribute('style', 'background: linear-gradient(45deg, #FFFB7D 0%, #85FFBD 100%)');
+    element.setAttribute('style', 'background-image:url("imgs/background2.jpg');
 
     let resultBox = document.getElementById( "resultText" ); 
 
