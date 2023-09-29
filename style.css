@@ -1,11 +1,13 @@
 body {
-    background-repeat: space;
     background-image: url("imgs/background.jpg");
     /* background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); */
-    width: auto;
-    height: 100vh;
     text-align: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* This keeps the background fixed while scrolling */
+    /* background-position: center center; /* Center the background image */
+    background-position: left;
 }
 
 label {
@@ -21,7 +23,7 @@ label {
     margin: 2vh;
     align-content: center;
     font-family: monospace;
-    font-size: x-large;
+    font-size: 2.5vh;
     padding: 5px;
 }
 
@@ -47,12 +49,12 @@ h1#titlePassword {
 }
 
 .inputs {
-    font-size: large;
+    font-size: 1rem;
 }
 
 h2#resultText {
     height: 100%;
-    font-size: larger;
+    font-size: inherit;
     justify-content: center;
     align-content: center;
     display: flex;
@@ -70,13 +72,17 @@ h2#resultText {
     height: 3rem;
     border-width: 2px;
     border-radius: 52px;
-    background: darkorange;
+    background: #ff0054;
     color: aliceblue;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
     font-size: large;
     text-shadow: 1px 1px 1px black;
+}
+
+.buttons {
+    margin: 1.5vh;
 }
 
 input#inputText {
@@ -87,6 +93,8 @@ input#inputText {
     border-radius: 15px;
     border-width: 1px;
     text-align: center;
+    margin: 1vh;
+
 }
 
 .buttonMain {
@@ -106,18 +114,18 @@ svg {
 
 .copyButton {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
-    align-content: center;
     justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 input#sliderRange {
     -webkit-appearance: none;
-    background: darkorange;
-    height: 3px;
-    width: 250px;
+    background: #ff0054;
+    height: 0.5vh;
+    width: 29vh;
     border-radius: 61%;
     accent-color: limegreen;
     cursor: pointer;
