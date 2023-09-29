@@ -61,6 +61,8 @@ h2#resultText {
     align-items: center;
     flex-direction: column;
     overflow-wrap: anywhere;
+    font-family: monospace;
+    color: #9e0059;
 }
 
 .buttonMain {
@@ -88,8 +90,8 @@ h2#resultText {
 input#inputText {
     height: 31px;
     width: 243px;
-    font-family: initial;
-    font-size: large;
+    font-family: monospace;
+    font-size: 0.8rem;
     border-radius: 15px;
     border-width: 1px;
     text-align: center;
@@ -102,7 +104,7 @@ input#inputText {
 }
 
 button.btn {
-    height: 3em;
+    height: 2em;
     width: fit-content;
     background: none;
     border: none;
@@ -119,6 +121,10 @@ svg {
     justify-content: center;
     align-content: center;
     align-items: center;
+    border-style: solid;
+    border-width: 0.1px;
+    border-radius: 10px;
+    padding: 0.4rem;
 }
 
 input#sliderRange {
