@@ -28,24 +28,31 @@ async function findHacked() {
       errorMsg.innerHTML = "No matches found.";
       return;
     }
+    const listOfEmails = emailData.filter((email) => {
+      return (
+        email.split("@")[0].toLowerCase() === query.split("@")[0].toLowerCase()
+      );
+    });
 
-    const listOfEmails = emailData.filter(
-      (email) => email.split("@")[0] === query.split("@")[0]
-    );
+    console.log(listOfEmails, "<<< list of emails");
 
     if (listOfEmails.length === 0) {
       errorMsg.innerHTML = "No exact matches found.";
       return;
     }
 
-    listOfEmails.forEach((email) => {
+    listOfEmails.forEach((input) => {
+      email = hashPass(input);
       const h3 = document.createElement("h3");
       h3.textContent = email;
       dataCollected.appendChild(h3);
+      h3.setAttribute(
+        "style",
+        "margin: 3px; font-size: 1em; font-style: italic;"
+      );
     });
   } catch (error) {
-    errorMsg.innerText =
-      "Server is currently busy. Please try again later.";
+    errorMsg.innerText = "Server is currently busy. Please try again later.";
     hideSpinner();
   }
 }
@@ -69,4 +76,20 @@ function showSpinner() {
 function hideSpinner() {
   const spinner = document.getElementById("spinner");
   spinner.classList.add("uk-hidden");
+}
+
+function hashPass(email) {
+  const emailOnly = email.split(":")[0];
+  const password = email.split(":")[1];
+  if (password.length > 5) {
+    const hashedPassword = password
+      .slice(1, password.length - 3)
+      .replace(/./g, "*");
+    const beginning = password.slice(0, 1);
+    const end = password.slice(password.length - 3, password.length);
+
+    return `${emailOnly} : Pass: ${beginning}${hashedPassword}${end}`;
+  } else {
+    return email;
+  }
 }
