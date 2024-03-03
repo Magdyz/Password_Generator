@@ -1,146 +1,147 @@
 body {
-    background-image: url("imgs/background.jpg");
-    /* background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); */
-    text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    /* This keeps the background fixed while scrolling */
-    /* background-position: center center; /* Center the background image */
-    background-position: left;
+  background-image: url("imgs/background.jpg");
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left;
+  margin: 0;
+  padding: 0;
 }
 
 label {
-    font-weight: 600;
+  font-weight: 200;
+  font-size: 11px;
 }
 
 .mainContainer {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    align-items: center;
-    justify-content: center;
-    margin: 2vh;
-    align-content: center;
-    font-family: monospace;
-    font-size: 2.5vh;
-    padding: 5px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-family: monospace;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .titleLabel {
-    font-size: large;
+  font-size: large;
 }
 
 h1#titlePassword {
-    cursor: pointer;
-    color: black;
-    font-family: 'Silkscreen', cursive;
-    font-size: 2em;
+  cursor: pointer;
+  color: rgb(62, 62, 62);
+  font-family: "Silkscreen", cursive;
+  font-size: 1.7em;
 }
 
 .textLabel {
-    text-align: center;
-    width: 80%;
-
+  text-align: center;
+  width: 80%;
 }
 
 .inputs {
-    font-size: 1rem;
+  font-size: 13px;
 }
 
 h2#resultText {
-    height: 100%;
-    font-size: inherit;
-    justify-content: center;
-    align-content: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    overflow-wrap: anywhere;
-    font-family: monospace;
-    color: #9e0059;
+  height: 100%;
+  font-size: inherit;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-wrap: anywhere;
+  font-family: monospace;
+  color: #9e0059;
 }
 
 .buttonMain {
-    width: 20rem;
+  width: 20rem;
 }
 
 #buttonClick {
-    width: 12rem;
-    height: 3rem;
-    border-width: 2px;
-    border-radius: 52px;
-    background: #ff0054;
-    color: aliceblue;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: large;
-    text-shadow: 1px 1px 1px black;
+  width: 12rem;
+  height: 3rem;
+  border-width: 2px;
+  border-radius: 52px;
+  background: rgb(62, 62, 62);
+  color: aliceblue;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 1px black;
+  font-family: monospace;
 }
 
 .buttons {
-    margin: 1.5vh;
+  margin: 1.5vh;
 }
 
 input#inputText {
-    height: 31px;
-    width: 243px;
-    font-family: monospace;
-    font-size: 0.8rem;
-    border-radius: 15px;
-    border-width: 1px;
-    text-align: center;
-    margin: 1vh;
-
+  font-family: monospace;
+  height: 31px;
+  width: 243px;
+  font-size: 0.8rem;
+  border-radius: 15px;
+  border-width: 1px;
+  text-align: center;
+  margin: 2em;
 }
 
 .buttonMain {
-    margin: 10px;
+  margin: 10px;
 }
 
 button.btn {
-    height: 2em;
-    width: fit-content;
-    background: none;
-    border: none;
+  height: 2em;
+  width: fit-content;
+  background: none;
+  border: none;
 }
 
 svg {
-    height: inherit;
+  height: inherit;
 }
 
 .copyButton {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    border-style: solid;
-    border-width: 0.1px;
-    border-radius: 10px;
-    padding: 0.4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 0.1px;
+  border-radius: 10px;
+  padding: 0.4rem;
+  margin: 1em;
 }
 
 input#sliderRange {
-    -webkit-appearance: none;
-    background: #ff0054;
-    height: 0.5vh;
-    width: 29vh;
-    border-radius: 61%;
-    accent-color: limegreen;
-    cursor: pointer;
+  -webkit-appearance: none;
+  background: #9e0059;
+  height: 0.5vh;
+  width: 29vh;
+  border-radius: 61%;
+  accent-color: rgb(62, 62, 62);
+  cursor: pointer;
 }
 
 h3#infoText {
-    font-size: inherit;
+  font-size: inherit;
+  font-weight: lighter;
+  font-size: 13px;
+  margin: 2em;
 }
 
 svg {
-    cursor: pointer;
+  cursor: pointer;
 }
+
+

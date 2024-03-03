@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Been Hacked</title>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="leaked.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.19.1/dist/css/uikit.min.css"
+    />
+  </head>
+  <body class="uk-background-muted ">
+          <nav>
+        <ul style="padding-left: 0px;">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./leaked.html">Leaked data</a></li>
+          <li>
+            <a class="active" href="https://magz.dev">About</a>
+          </li>
+        </ul>
+      </nav>
+
+    <section class="uk-align-center uk-card-body">
+      <h1 class="uk-card-title">Check if your data has been leaked</h1>
+      <div class="uk-column-1-2">
+        <input class="uk-input" id="textInput" type="text" />
+        <button
+          onclick="findHacked()"
+          class="uk-button uk-button-default"
+          type="button"
+        >
+          <span uk-icon="search"></span>
+Check my email!
+        </button>
+      </div>
+
+      <h3 id="errorMsg"></h3>
+      <div id="spinner" uk-spinner class="uk-hidden"></div>
+      <section class="uk-background-muted ">
+        <h1 class="uk-section-xlarge" id="data"></h1>
+      </section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.1/dist/js/uikit-icons.min.js"></script>
+  </body>
+</html>
