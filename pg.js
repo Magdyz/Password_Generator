@@ -9,7 +9,7 @@ const nouns = ["people", "history", "way", "art", "world", "information", "map",
 // generate password using list of letters (could possibly add accepted signs to the list later)
 
 const listOfLetters = "AaBbCcDdEeFfGgEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtWwXxYyZz";
-const symbols = "!@#$%^&*()_-+={[}]:;.?"
+const symbols = "!@#$%&*_-+=?"
 const numbers = "0123456789"
 const allCharactersSymbols = listOfLetters + symbols
 const allCharactersNumbers = listOfLetters + numbers
@@ -162,11 +162,7 @@ sliderValue.oninput = function () {
 
 function generateRandomWordPass(){
     
-    // Change background color 
     
-    const element = document.querySelector('body');
-    element.setAttribute('style', 'background-image:url("imgs/background2.jpg');
-
     let resultBox = document.getElementById( "resultText" ); 
 
     // create a random verb, color and noun from the list of strings
@@ -195,8 +191,6 @@ function generateRandomWordPass(){
     infoTextBox.innerHTML = "We have created a strong and memorable password for you";
 
     resultBox.innerHTML = CapRandomVerb + CapRandomColor + CapRandomNoun + randomPassword + lastLetterRandom
-
-    console.log(randomPassword)
     
     // update slider value with the new length of pass
 

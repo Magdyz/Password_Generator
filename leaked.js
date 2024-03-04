@@ -34,8 +34,6 @@ async function findHacked() {
       );
     });
 
-    console.log(listOfEmails, "<<< list of emails");
-
     if (listOfEmails.length === 0) {
       errorMsg.innerHTML = "No exact matches found.";
       return;
